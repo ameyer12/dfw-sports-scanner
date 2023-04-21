@@ -1,0 +1,43 @@
+.dallas-stars-page-container {
+    background-color: #f1ebe5;
+    height: 100vh;
+}
+
+.back-button {
+    background-color: #4169e1 !important;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.stars-logo-image {
+    background-color: white;
+    background-size: cover;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.stars-header-container {
+    color: #423f32;
+    display: grid;
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 21.5rem;
+}
+
+.stars-page-grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.stars-page-grid-item-2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.stars-page-h1 {
+    margin-top: 4%;
+}
+
+.stars-page-p1 {
+    margin-left: 1%;
+}

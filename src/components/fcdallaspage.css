@@ -1,0 +1,43 @@
+.fcdallas-page-container {
+    background-color: #f1ebe5;
+    height: 100vh;
+}
+
+.back-button {
+    background-color: #4169e1 !important;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.fcdallas-logo-image {
+    background-color: white;
+    background-size: cover;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.fcdallas-header-container {
+    color: #423f32;
+    display: grid;
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 20rem;
+}
+
+.fcdallas-page-grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.fcdallas-page-grid-item-2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.fcdallas-page-h1 {
+    margin-top: 4%;
+}
+
+.fcdallas-page-p1 {
+    margin-left: 1%;
+}

@@ -1,0 +1,77 @@
+.homepage-container {
+    background-color: #4169e1;
+    background-image: url("./dfw-logos-background.png");
+    background-position: right;
+    background-repeat: repeat-y;
+    background-size: 50% auto;
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    margin: 0;
+    width: 100vw;
+}
+
+.homepage-text-container {
+    align-self: center;
+    color: white;
+    display: grid;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+}
+
+.homepage-grid-item1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.homepage-grid-item2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    margin-left: -26.5%;
+    margin-top: 12%;
+}
+.homepage-grid-item3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+.homepage-link-panel {
+    align-self: center;
+    background-color: #f1ebe5;
+    height: 35rem;
+    width: 25rem;
+}
+
+.homepage-links {
+    list-style: none;
+    margin-top: 10%;
+}
+
+.homepage-button {
+    background-color: #f1ebe5;
+    border: 1pt solid #423f32;
+    border-radius: 0%;
+    color: #423f32;
+    cursor: pointer;
+    height: 2.5rem;
+    margin-left: 1%;
+    margin-top: 7%;
+    width: 20rem;
+}
+
+.homepage-button:hover {
+    background-color: #4169e1;
+}
+
+.homepage-social-links-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 10%;
+    margin-top: 7%;
+}
+
+.homepage-social-links {
+    list-style: none;
+}
