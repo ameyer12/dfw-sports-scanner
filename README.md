@@ -1,1 +1,1 @@
-<!-- This will be the project description. --># dfw-sports-scanner
+<!-- This will be the project description. -->
