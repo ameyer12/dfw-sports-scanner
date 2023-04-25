@@ -41,3 +41,21 @@
 .cowboys-page-p1 {
     margin-left: 1%;
 }
+
+.cowboys-twitter-widget {
+    margin-top: 5%;
+    margin-left: 2%;
+    height: 30rem;
+    overflow-y: scroll;
+    width: 30%;
+}
+
+#cowboys-page-map {
+    height: 1000px;
+    width: 1000px;
+}
+
+/* .cowboys-page-pin-icon {
+    color: red;
+    font-size: 40px;
+} */
