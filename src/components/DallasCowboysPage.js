@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Timeline, Tweet } from 'react-twitter-widgets'
 import GoogleMapReact from 'google-map-react';
 import cowboysLogo from "./cowboys-logo.png";
-import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+
 
 function DallasCowboysPage({navigate}) {
 
@@ -70,21 +70,23 @@ function DallasCowboysPage({navigate}) {
             <p className="cowboys-page-p1">Record: 12-5 | 2nd NFC East</p>
           </div>
         </div>
-        <div className="cowboys-twitter-widget">
-          {/* <Timeline dataSource={{ sourceType: "profile", screenName: "dallascowboys" }}/> */}
-        </div>
-        <div id="cowboys-page-map">
-          <GoogleMapReact
-            bootstrapURLKeys={{ key: "AIzaSyC7ZamBBU79p5Kh6qE8SQ6N1UaYANUNac4"}}
-            defaultCenter={defaultProps.center}
-            defaultZoom={defaultProps.zoom}
-          >
-          <CowboysPageMarker
-            lat={32.74738363371771}
-            lng={-97.09452609047312}
-            text={"AT&T Stadium"}
-          />
-        </GoogleMapReact>
+        <div className="cowboys-page-main-container">
+          <div className="cowboys-twitter-widget">
+            <Timeline dataSource={{ sourceType: "profile", screenName: "dallascowboys" }}/>
+          </div>
+          <div id="cowboys-page-map">
+            <GoogleMapReact
+              bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
+              defaultCenter={defaultProps.center}
+              defaultZoom={defaultProps.zoom}
+            >
+            <CowboysPageMarker
+              lat={32.74738363371771}
+              lng={-97.09452609047312}
+              text={"AT&T Stadium"}
+            />
+          </GoogleMapReact>
+          </div>
         </div>
     </div>
   );

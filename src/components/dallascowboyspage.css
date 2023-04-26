@@ -51,11 +51,11 @@
 }
 
 #cowboys-page-map {
-    height: 1000px;
-    width: 1000px;
+    height: 25rem;
+    width: 25rem;
 }
 
-/* .cowboys-page-pin-icon {
-    color: red;
-    font-size: 40px;
-} */
+.cowboys-page-main-container {
+    display: flex;
+    justify-content: space-between;
+}
