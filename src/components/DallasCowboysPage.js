@@ -9,21 +9,22 @@ import cowboysLogo from "./cowboys-logo.png";
 
 function DallasCowboysPage({navigate}) {
 
-  // const [cowboysTeamData, setCowboysTeamData] = useState({id: 0, name: "", logo: ""});
+  const [cowboysTeamData, setCowboysTeamData] = useState({id: 0, name: "", logo: ""});
 
-  // const fetchCowboysTeamData = async () => {
-  //   const results = await getCowboysTeamData();
-  //   const data = results.response[0];
+  const fetchCowboysTeamData = async () => {
+    const results = await getCowboysTeamData();
+    const data = results.response[0];
 
-  //   setCowboysTeamData(prevState => ({
-  //       ...prevState,
-  //       id: data.id,
-  //       name: data.name,
-  //       logo: data.logo
-  //     }));
+    setCowboysTeamData(prevState => ({
+        ...prevState,
+        id: data.id,
+        name: data.name,
+        logo: data.logo
+      }));
 
-  //   return cowboysTeamData;
-  // }
+    return cowboysTeamData;
+  }
+
 
   const CowboysPageMarker = ({ text }) => (
     <div style={{
@@ -54,7 +55,7 @@ function DallasCowboysPage({navigate}) {
   // useEffect(() => {
   //   fetchCowboysTeamData();
   // }, [])
-    
+
   return (
     <div className="dallas-cowboys-page-container">
         <Button 
@@ -73,6 +74,15 @@ function DallasCowboysPage({navigate}) {
         <div className="cowboys-page-main-container">
           <div className="cowboys-twitter-widget">
             <Timeline dataSource={{ sourceType: "profile", screenName: "dallascowboys" }}/>
+          </div>
+          <div className="cowboys-page-roster">
+            <table>
+              <th>2023 Schedule</th>
+              <tr>Cowboys at Eagles</tr>
+              <tr>Cowboys vs Giants</tr>
+              <tr>Cowboys at Redskins</tr>
+              <tr>Cowboys at Buccaneers</tr>
+            </table>
           </div>
           <div id="cowboys-page-map">
             <GoogleMapReact

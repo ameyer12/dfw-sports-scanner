@@ -52,10 +52,18 @@
 
 #cowboys-page-map {
     height: 25rem;
+    margin-right: 2%;
     width: 25rem;
 }
 
 .cowboys-page-main-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    background-color: red;
+    height: 25rem;
+    width: 25rem;
 }
