@@ -1,6 +1,6 @@
 import "./dallascowboyspage.css";
 import { Button } from "react-bootstrap";
-import { getCowboysTeamData } from "../api";
+import { getCowboysScheduleData, getCowboysRecordData } from "../api";
 import { useEffect, useState } from "react";
 import { Timeline, Tweet } from 'react-twitter-widgets'
 import GoogleMapReact from 'google-map-react';
@@ -9,22 +9,23 @@ import cowboysLogo from "./cowboys-logo.png";
 
 function DallasCowboysPage({navigate}) {
 
-  const [cowboysTeamData, setCowboysTeamData] = useState({id: 0, name: "", logo: ""});
+  const [cowboysRecordData, setCowboysRecordData] = useState({});
+  const [cowboysScheduleData, setCowboysScheduleData] = useState({});
 
-  const fetchCowboysTeamData = async () => {
-    const results = await getCowboysTeamData();
-    const data = results.response[0];
 
-    setCowboysTeamData(prevState => ({
-        ...prevState,
-        id: data.id,
-        name: data.name,
-        logo: data.logo
-      }));
-
-    return cowboysTeamData;
+  const fetchCowboysRecordData = async () => {
+    const response = await getCowboysRecordData();
+    
+    return response;
   }
 
+
+  const fetchCowboysScheduleData = async () => {
+    const response = await getCowboysScheduleData();
+      
+    return response;
+  }
+  
 
   const CowboysPageMarker = ({ text }) => (
     <div style={{
@@ -38,7 +39,7 @@ function DallasCowboysPage({navigate}) {
       borderRadius: '100%',
       transform: 'translate(-50%, -50%)'
     }}>
-      {text} <span class="cowboys-page-pin-icon material-icons">push_pin</span>
+    {text}
     </div>
   );
 
@@ -51,9 +52,11 @@ function DallasCowboysPage({navigate}) {
       zoom: 15
   };
 
+    // fetchCowboysRecordData();
 
   // useEffect(() => {
-  //   fetchCowboysTeamData();
+  //   fetchCowboysRecordData();
+  //   fetchCowboysScheduleData();
   // }, [])
 
   return (
@@ -78,10 +81,10 @@ function DallasCowboysPage({navigate}) {
           <div className="cowboys-page-roster">
             <table>
               <th>2023 Schedule</th>
-              <tr>Cowboys at Eagles</tr>
-              <tr>Cowboys vs Giants</tr>
-              <tr>Cowboys at Redskins</tr>
-              <tr>Cowboys at Buccaneers</tr>
+              <tr><td>Cowboys at Eagles</td></tr>
+              <tr><td>Cowboys vs Giants</td></tr>
+              <tr><td>Cowboys at Redskins</td></tr>
+              <tr><td>Cowboys at Buccaneers</td></tr>
             </table>
           </div>
           <div id="cowboys-page-map">
